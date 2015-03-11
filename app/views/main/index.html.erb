@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Top 5 Songs</h1>
+<p>Here are my jams.</p>
+
+<div class="row">
+  <% @songs.each do |song| %>
+  <div class = "col-md-12">
+    <div class ="well">
+	<h2><%= song.title %></h2>
+	<h3>by <%= song.artist.name %></h3>
+	<h4><%= song.rating %> stars</h4>
+	</div>    
+  </div>
+  <% end %>
+</div>
